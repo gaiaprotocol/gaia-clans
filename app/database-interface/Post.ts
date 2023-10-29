@@ -1,14 +1,14 @@
 import { I18NText } from "common-dapp-module";
 import { UploadedFile } from "./Rich.js";
 
-export enum Target {
+export enum PostTarget {
   EVERYONE,
   KEY_HOLDERS,
 }
 
 export default interface Post {
   id: number;
-  target: Target;
+  target: PostTarget;
   author: string;
   author_name: string;
   author_avatar_url?: string;
