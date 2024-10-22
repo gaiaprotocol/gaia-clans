@@ -67,7 +67,7 @@
   },
   "exclude": [
     "dist",
-    "supabase",
+    "supabase-testnet",
     "node_modules",
     ".vscode",
     "test-src",
@@ -75,5 +75,8 @@
     "test",
     "typechain-types",
     "scripts",
+    "legacy",
+    "public",
+    "server"
   ]
 }
