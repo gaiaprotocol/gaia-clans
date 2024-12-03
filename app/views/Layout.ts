@@ -3,7 +3,7 @@ import { Button, ButtonType } from "@common-module/app-components";
 import { LoggedInUserAvatarButton } from "@common-module/social-components";
 import { WalletLoginManager } from "@common-module/wallet-login";
 import { AddIcon } from "@gaiaprotocol/svg-icons";
-import ClanTechLogo from "../components/ClanTechLogo.js";
+import ClanTechLogo from "../ClanTechLogo.js";
 
 export default class Layout extends View {
   private static current: Layout;
