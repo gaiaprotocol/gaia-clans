@@ -1,6 +1,8 @@
-import { BodyNode, DomNode, el, View } from "@common-module/app";
+import { BodyNode, DomNode, el, Router, View } from "@common-module/app";
+import { Button, ButtonType } from "@common-module/app-components";
 import { LoggedInUserAvatarButton } from "@common-module/social-components";
 import { WalletLoginManager } from "@common-module/wallet-login";
+import { AddIcon } from "@gaiaprotocol/svg-icons";
 import ClanTechLogo from "../components/ClanTechLogo.js";
 
 export default class Layout extends View {
@@ -27,6 +29,18 @@ export default class Layout extends View {
         ),
       ),
       this.contentContainer = el("main"),
+      el(
+        ".clan-list-container",
+        el(
+          "footer",
+          new Button({
+            type: ButtonType.Contained,
+            icon: new AddIcon(),
+            title: "Create Clan",
+            onClick: () => Router.go("/new-clan"),
+          }),
+        ),
+      ),
     ).appendTo(BodyNode);
   }
 }
