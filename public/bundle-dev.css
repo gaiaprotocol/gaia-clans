@@ -2073,6 +2073,13 @@ li.chat-message-list-item > main {
 .clan-logo-input > .logo-display:hover > .icon.upload {
   display: block;
 }
+.clan-logo-input > .logo-display.drag-hover {
+  filter: brightness(0.8);
+  border: 2px dashed #666;
+}
+.clan-logo-input > .logo-display.drag-hover > .icon.upload {
+  display: block;
+}
 .clan-logo-input > button.clear {
   position: absolute;
   top: 0;

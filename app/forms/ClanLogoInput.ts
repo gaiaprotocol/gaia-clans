@@ -21,6 +21,7 @@ export default class ClanLogoInput extends DomNode<HTMLDivElement, {
 
   constructor(private data: LogoData) {
     super(".clan-logo-input");
+
     this.append(
       this.invisibleFileInput = new InvisibleFileInput({
         accept: "image/*",
@@ -38,6 +39,29 @@ export default class ClanLogoInput extends DomNode<HTMLDivElement, {
         onClick: () => this.clearLogo(),
       }),
     );
+
+    this.logoDisplay.onDom("dragenter", (event) => {
+      event.preventDefault();
+      this.logoDisplay.addClass("drag-hover");
+    });
+
+    this.logoDisplay.onDom("dragover", (event) => {
+      event.preventDefault();
+      this.logoDisplay.addClass("drag-hover");
+      event.dataTransfer!.dropEffect = "copy";
+    });
+
+    this.logoDisplay.onDom("dragleave", () => {
+      this.logoDisplay.removeClass("drag-hover");
+    });
+
+    this.logoDisplay.onDom("drop", (event) => {
+      event.preventDefault();
+      this.logoDisplay.removeClass("drag-hover");
+      if (event.dataTransfer!.files.length > 0) {
+        this.uploadLogoImage(event.dataTransfer!.files[0]);
+      }
+    });
   }
 
   private async optimizeAndUploadImage(file: File, maxSize: number) {
