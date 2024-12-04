@@ -2059,6 +2059,20 @@ li.chat-message-list-item > main {
   background-size: cover;
   background-position: center;
 }
+.clan-logo-input > .logo-display > .icon.upload {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clan-logo-input > .logo-display:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+.clan-logo-input > .logo-display:hover > .icon.upload {
+  display: block;
+}
 .clan-logo-input > button.clear {
   position: absolute;
   top: 0;

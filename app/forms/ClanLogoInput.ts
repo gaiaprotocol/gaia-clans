@@ -5,7 +5,7 @@ import {
   ButtonType,
   InvisibleFileInput,
 } from "@common-module/app-components";
-import { DeleteIcon } from "@gaiaprotocol/svg-icons";
+import { DeleteIcon, UploadIcon } from "@gaiaprotocol/svg-icons";
 import { GaiaProtocolConfig } from "gaiaprotocol";
 
 interface LogoData {
@@ -31,7 +31,7 @@ export default class ClanLogoInput extends DomNode<HTMLDivElement, {
       this.logoDisplay = el(".logo-display", {
         style: { backgroundImage: `url(${this.data.logoImageUrl})` },
         onclick: () => this.invisibleFileInput.openFileSelector(),
-      }),
+      }, new UploadIcon()),
       new Button(".clear", {
         type: ButtonType.Circle,
         icon: new DeleteIcon(),
