@@ -1,11 +1,11 @@
 import { DomNode } from "@common-module/app";
-import ClanLogoInput from "./ClanLogoInput.js";
+import { LogoInput } from "gaiaprotocol";
 
 export default class ClanForm extends DomNode {
   constructor() {
     super(".clan-form");
     this.append(
-      new ClanLogoInput({}),
+      new LogoInput({ functionName: "upload-clan-logo" }, {}),
     );
   }
 }
