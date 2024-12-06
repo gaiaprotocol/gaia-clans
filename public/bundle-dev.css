@@ -2098,7 +2098,7 @@ li.chat-message-list-item > main {
   flex-direction: column;
   gap: 24px;
 }
-.clan-form > .clan-logo-input {
+.clan-form > .logo-input {
   margin: 0 auto;
 }
 .layout {
